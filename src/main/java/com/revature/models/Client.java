@@ -4,14 +4,15 @@ public class Client extends User {
 
 	private boolean passwordSet = false; 
 	
-	public Client(int userID, String userFirstName, String userLastName, String userLogIn, String userPassword) {
-		super(userID, userFirstName, userLastName, userLogIn, userPassword);
+	public Client(String userFirstName, String userLastName, String userLogIn, String userPassword) {
+		super(userFirstName, userLastName, userLogIn, userPassword);
 	}
 
-	public Client(int userID, String userFirstName, String userLastName) {
-		super(userID, userFirstName, userLastName);
+	public Client(String userFirstName, String userLastName) {
+		super(userFirstName, userLastName);
 		this.setUserLogIn(userFirstName.toLowerCase()+"."+ userLastName.toLowerCase());
-		this.setUserPassword(Character.toString(userLastName.charAt(0)) + Character.toString(userFirstName.charAt(0)) + userID); 
+		this.setUserPassword(Character.toString(userLastName.charAt(0)) + Character.toString(userFirstName.charAt(0))/* + userID*/); 
+	//TODO set auto password once ID is made
 	}
 
 	public boolean isPasswordSet() {
@@ -24,12 +25,7 @@ public class Client extends User {
 			this.setUserPassword(newPassword);
 			passwordSet = true;
 		}
-		
-		
 	}
 	
 	
-	
-	
-
 }

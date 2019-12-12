@@ -63,20 +63,26 @@ public abstract class User {
 		this.userPassword = userPassword;
 	}
 
-	public User(int userID, String userFirstName, String userLastName, String userLogIn, String userPassword) {
+	public User(String userFirstName, String userLastName, String userLogIn, String userPassword) {
 		super();
-		this.userID = userID;
+		//this.userID = userID;
 		this.userFirstName = userFirstName;
 		this.userLastName = userLastName;
 		this.userLogIn = userLogIn;
 		this.userPassword = userPassword;
 	}
 
-	public User(int userID, String userFirstName, String userLastName) {
+	public User(String userFirstName, String userLastName) {
 		super();
-		this.userID = userID;
+		//this.userID = userID;
 		this.userFirstName = userFirstName;
 		this.userLastName = userLastName;
+	}
+
+	@Override
+	public String toString() {
+		return "User " + userID + ",\n userFirstName=" + userFirstName + ",\n userLastName=" + userLastName
+				+ ",\n userLogIn=" + userLogIn;
 	}
 	
 	
