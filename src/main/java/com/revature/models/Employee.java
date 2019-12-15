@@ -9,9 +9,21 @@ public class Employee extends User {
 		
 	}
 
-	public Employee(String userFirstName, String userLastName, String userLogIn, String userPassword) {
+	public Employee(String userFirstName, String userLastName, String userLogIn, int userPassword) {
 		super(userFirstName, userLastName, userLogIn, userPassword);
 	}
+	
+	
+
+	public Employee(int userID, String userFirstName, String userLastName, String userLogIn, int userPassword) {
+		super(userID, userFirstName, userLastName, userLogIn, userPassword);
+	}
+	
+	public Employee(int userID, String userFirstName, String userLastName, String userLogIn, int userPassword, boolean approved) {
+		super(userID, userFirstName, userLastName, userLogIn, userPassword);
+		this.approved = approved;
+	}
+
 
 	public boolean isApproved() {
 		return approved;

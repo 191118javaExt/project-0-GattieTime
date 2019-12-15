@@ -12,7 +12,7 @@ public class Admin extends User {
 		this.approved = approved;
 	}
 
-	public Admin(String userFirstName, String userLastName, String userLogIn, String userPassword) {
+	public Admin(String userFirstName, String userLastName, String userLogIn, int userPassword) {
 		super(userFirstName, userLastName, userLogIn, userPassword);
 		// TODO Auto-generated constructor stub
 	}
@@ -21,5 +21,17 @@ public class Admin extends User {
 		super(userFirstName, userLastName);
 		// TODO Auto-generated constructor stub
 	}
+
+	public Admin(int userID, String userFirstName, String userLastName, String userLogIn, int userPassword) {
+		super(userID, userFirstName, userLastName, userLogIn, userPassword);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Admin(int userID, String userFirstName, String userLastName, String userLogIn, int userPassword, boolean approved) {
+		super(userID, userFirstName, userLastName, userLogIn, userPassword);
+		this.approved = approved; 
+	}
+	
+	
 
 }

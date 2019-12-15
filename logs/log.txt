@@ -1,0 +1,105 @@
+2019-12-13 18:09:05 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-13 18:11:58 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-13 18:14:53 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-13 18:17:24 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:08:56 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:18:31 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:20:51 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:21:13 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:26:05 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:29:00 WARN  ConnectionUtil:23 - Unable to get connection to database
+2019-12-14 11:30:27 WARN  ConnectionUtil:76 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:74)
+	at com.revature.repositories.EmployeeDAOImp.findById(EmployeeDAOImp.java:54)
+	at com.revature.Driver.main(Driver.java:23)
+2019-12-14 11:43:32 WARN  EmployeeDAOImp:80 - Unable to insert user.
+org.postgresql.util.PSQLException: Can't use query methods that take a query string on a PreparedStatement.
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:95)
+	at com.revature.repositories.EmployeeDAOImp.findById(EmployeeDAOImp.java:61)
+	at com.revature.Driver.main(Driver.java:23)
+2019-12-14 12:22:50 WARN  ConnectionUtil:76 - Unable to obtain connection to database
+org.postgresql.util.PSQLException: FATAL: database "project0" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2617)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:135)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:250)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:458)
+	at org.postgresql.Driver.connect(Driver.java:260)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:74)
+	at com.revature.repositories.EmployeeDAOImp.insert(EmployeeDAOImp.java:87)
+	at com.revature.Driver.entrySwitch(Driver.java:60)
+	at com.revature.Driver.main(Driver.java:18)
+2019-12-14 13:41:59 WARN  EmployeeDAOImp:102 - Unable to insert employee.
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "is_unique"
+  Detail: Key (login)=(jmoe) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.EmployeeDAOImp.insert(EmployeeDAOImp.java:99)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:48)
+	at com.revature.Driver.main(Driver.java:8)
+2019-12-14 14:29:12 WARN  EmployeeDAOImp:102 - Unable to insert employee.
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "is_unique"
+  Detail: Key (login)=(jmoe) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.EmployeeDAOImp.insert(EmployeeDAOImp.java:99)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:48)
+	at com.revature.Driver.main(Driver.java:8)
+2019-12-14 14:37:26 WARN  EmployeeDAOImp:107 - Unable to insert employee.
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "is_unique"
+  Detail: Key (login)=(jmoe) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.EmployeeDAOImp.insert(EmployeeDAOImp.java:100)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:48)
+	at com.revature.Driver.main(Driver.java:8)
+2019-12-14 15:20:40 WARN  EmployeeDAOImp:81 - Unable to insert user.
+org.postgresql.util.PSQLException: Can't use query methods that take a query string on a PreparedStatement.
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:95)
+	at com.revature.repositories.EmployeeDAOImp.findById(EmployeeDAOImp.java:62)
+	at com.revature.Driver.main(Driver.java:16)
+2019-12-14 15:29:04 WARN  EmployeeDAOImp:80 - Unable to insert user.
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2786)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1887)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2480)
+	at com.revature.repositories.EmployeeDAOImp.findById(EmployeeDAOImp.java:65)
+	at com.revature.Driver.main(Driver.java:16)
+2019-12-14 20:44:38 WARN  ClientDAOImp:132 - Unable to insert client.
+org.postgresql.util.PSQLException: No value specified for parameter 5.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:264)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:294)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.ClientDAOImp.insert(ClientDAOImp.java:129)
+	at com.revature.services.NewUserCreation.newUserAccount(NewUserCreation.java:28)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:47)
+	at com.revature.Driver.main(Driver.java:9)
+2019-12-14 23:33:29 INFO  UserAuthent:39 - Client logged in successfully
+2019-12-15 06:10:58 INFO  UserAuthent:39 - Client logged in successfully
+2019-12-15 06:22:57 INFO  Driver:13 - Application Started
+2019-12-15 06:23:08 INFO  UserAuthent:55 - Client logged in successfully

@@ -3,8 +3,6 @@ package com.revature.models;
 
 public abstract class User {
 	
-	private static int totalUsers;
-	
 	private int userID;
 	
 	private String userFirstName;
@@ -13,15 +11,8 @@ public abstract class User {
 	
 	private String userLogIn;
 	
-	private String userPassword;
+	private int userPassword;
 
-	public static int getTotalUsers() {
-		return totalUsers;
-	}
-
-	public static void setTotalUsers(int totalUsers) {
-		User.totalUsers = totalUsers;
-	}
 
 	public int getUserID() {
 		return userID;
@@ -55,15 +46,26 @@ public abstract class User {
 		this.userLogIn = userLogIn;
 	}
 
-	public String getUserPassword() {
+	public int getUserPassword() {
 		return userPassword;
 	}
 
-	public void setUserPassword(String userPassword) {
+	public void setUserPassword(int userPassword) {
+		this.userPassword = userPassword;
+	}
+	
+	
+
+	public User(int userID, String userFirstName, String userLastName, String userLogIn, int userPassword) {
+		super();
+		this.userID = userID;
+		this.userFirstName = userFirstName;
+		this.userLastName = userLastName;
+		this.userLogIn = userLogIn;
 		this.userPassword = userPassword;
 	}
 
-	public User(String userFirstName, String userLastName, String userLogIn, String userPassword) {
+	public User(String userFirstName, String userLastName, String userLogIn, int userPassword) {
 		super();
 		//this.userID = userID;
 		this.userFirstName = userFirstName;
