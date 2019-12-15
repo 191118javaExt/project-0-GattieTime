@@ -77,7 +77,7 @@ public class NewUserCreation {
 		return i;
 	}
 
-	private static int makeNewPassword() {
+	static int makeNewPassword() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("What is your password?");
 		boolean b = false;
@@ -98,7 +98,7 @@ public class NewUserCreation {
 	}
 
 	// Gets and confirms the user's preferred login name
-	private static String makeNewLogIn() {
+	static String makeNewLogIn() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("What should your log in name be?");
 		boolean b = false;
@@ -128,7 +128,7 @@ public class NewUserCreation {
 	}
 
 	// Gets and confirms user's last name
-	private static String makeNewLast() {
+	static String makeNewLast() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("What is the user's last name?");
 		boolean b = false;
@@ -151,9 +151,9 @@ public class NewUserCreation {
 	}
 
 	// Gets and confirms user's first name
-	private static String makeNewFirst() {
+	static String makeNewFirst() {
 		Scanner s = new Scanner(System.in);
-		System.out.println("What is the user's First Name?");
+		System.out.println("What is the account owner's First Name?");
 		String firstName = new String();
 		boolean b = false;
 		while (b == false) {
