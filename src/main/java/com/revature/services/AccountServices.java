@@ -25,8 +25,9 @@ public class AccountServices {
 		if (a.getUserID() == user.getUserID()) {
 			if (a.isApproved()) {
 				transactions(a);
-			}else {
-				System.out.println("That account has not yet been approved. Please wait for approval before trying to access that account.");
+			} else {
+				System.out.println(
+						"That account has not yet been approved. Please wait for approval before trying to access that account.");
 				manageAccounts(user);
 				logger.info("User tried to access an unapproved account.");
 			}
@@ -42,15 +43,95 @@ public class AccountServices {
 		System.out.println(a);
 		int i = transSelect();
 		if (i == 1) {
-			AccountDAOImp aDAO = new AccountDAOImp();
+			System.out.println("Your account " + a.getName() + " has a balance of " + a.getBalance() + ".");
+			deposit(a);
+			transactions(a);
+		} else if (i == 2) {
+			System.out.println("Your account " + a.getName() + " has a balance of " + a.getBalance() + ".");
+			withdraw(a);
+			transactions(a);
+		} else if (i == 3) {
 			System.out.println("Your account " + a.getName() + " has a balance of " + a.getBalance() + ".");
 			transfer(a);
 			transactions(a);
+		} else if (i == 4) {
+			System.out.println("Thank you for chosing Her Royal Majesty's Bank of Revature. Where unicorns do their banking.");
+			logger.info("User exited from accounts menu.");
+		} else {
+			System.out.println("Something went wrong. Please restart the application and try again.");
+			logger.warn("invailid int returned from transSelect");
 		}
 
 	}
 
 	private static void transfer(Account a) {
+		System.out.println("What is the account number number you would like to transer funds to?");
+		Scanner s = new Scanner(System.in);
+		int i = s.nextInt();
+		AccountDAOImp aDAO = new AccountDAOImp();
+		Account ac = aDAO.findById(i);
+		if (ac == null) {
+			System.out.println("That is not a valid account number. Please try again");
+			logger.info("User tried to transer to an account that does not exist.");
+		} else {
+			System.out.println("How much would you like to transfer?");
+			double e = 0;
+			try {
+				e = s.nextDouble();
+
+			} catch (InputMismatchException ex) {
+				System.out.println("That is not a valid entry; please try again.");
+				transactions(a);
+			}
+			if (i >= 0) {
+				double d = ac.getBalance();
+				d += e;
+				ac.setBalance(d);
+				aDAO.update(ac);
+				d = a.getBalance();
+				d -= e;
+				a.setBalance(d);
+				aDAO.update(a);
+				System.out.println(
+						"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
+				logger.info("transfer made between accounts" + a.getAccID() + "and" + ac.getAccID());
+			} else {
+				System.out.println("You man not make a deposit of a negative amount. please try again");
+				logger.info("User tried to transfer a negative amount");
+			}
+		}
+
+	}
+
+	private static void withdraw(Account a) {
+		System.out.println("How much would you like to withdraw?");
+		Scanner s = new Scanner(System.in);
+		double i = 0;
+		try {
+			i = s.nextDouble();
+
+		} catch (InputMismatchException e) {
+			System.out.println("That is not a valid entry; please try again.");
+			transactions(a);
+		}
+		if (i >= 0) {
+			double d = a.getBalance();
+			i -= d;
+			a.setBalance(i);
+			AccountDAOImp aDAO = new AccountDAOImp();
+			aDAO.update(a);
+			System.out.println(
+					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
+			logger.info("Deposit made into account");
+		} else {
+			System.out.println(
+					"You man not make a withdraw of a negative amount. If you would like to make a deposit please do so now");
+			logger.info("User tried to withdraw a negative amount");
+		}
+
+	}
+
+	private static void deposit(Account a) {
 		System.out.println("How much would you like to deposit?");
 		Scanner s = new Scanner(System.in);
 		double i = 0;
