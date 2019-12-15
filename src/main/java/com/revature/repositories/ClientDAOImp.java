@@ -147,7 +147,7 @@ public class ClientDAOImp implements ClientDAO {
 			stmt.setString(2, e.getUserLastName());
 			stmt.setString(3, e.getUserLogIn());
 			stmt.setInt(4, e.getUserPassword());
-			stmt.setInt(6, e.getUserID());
+			stmt.setInt(5, e.getUserID());
 
 			if (!stmt.execute()) {
 				return false;

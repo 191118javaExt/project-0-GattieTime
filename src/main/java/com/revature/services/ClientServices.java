@@ -20,9 +20,9 @@ public class ClientServices {
 		System.out.println("[4]: Close the application");
 		int choice = mainSelection();
 		if (choice == 1) {
-			accountServices.manageAccounts(user);
+			AccountServices.manageAccounts(user);
 		} else if (choice ==2) {
-			accountServices.apply(user);
+			AccountServices.apply(user);
 		} else if (choice == 3) {
 			changeInfo(user);
 		} else if (choice == 4) {
@@ -126,7 +126,7 @@ public class ClientServices {
 			i = mainSelection();
 		}
 
-		if (i != 1 && i != 2 && i != 3) {
+		if (i != 1 && i != 2 && i != 3 && i != 4) {
 			System.out.println("You did not enter a valid number.");
 			i = mainSelection();
 		}

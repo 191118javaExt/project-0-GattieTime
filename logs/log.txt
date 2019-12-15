@@ -103,3 +103,53 @@ org.postgresql.util.PSQLException: No value specified for parameter 5.
 2019-12-15 06:10:58 INFO  UserAuthent:39 - Client logged in successfully
 2019-12-15 06:22:57 INFO  Driver:13 - Application Started
 2019-12-15 06:23:08 INFO  UserAuthent:55 - Client logged in successfully
+2019-12-15 12:11:59 INFO  Driver:13 - Application Started
+2019-12-15 12:12:11 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 12:12:32 WARN  ClientDAOImp:157 - Unable to update client.
+org.postgresql.util.PSQLException: The column index is out of range: 6, number of columns: 5.
+	at org.postgresql.core.v3.SimpleParameterList.bind(SimpleParameterList.java:64)
+	at org.postgresql.core.v3.SimpleParameterList.setBinaryParameter(SimpleParameterList.java:131)
+	at org.postgresql.jdbc.PgPreparedStatement.bindBytes(PgPreparedStatement.java:1005)
+	at org.postgresql.jdbc.PgPreparedStatement.setInt(PgPreparedStatement.java:290)
+	at com.revature.repositories.ClientDAOImp.update(ClientDAOImp.java:150)
+	at com.revature.services.ClientServices.changeInfo(ClientServices.java:61)
+	at com.revature.services.ClientServices.mainMenu(ClientServices.java:27)
+	at com.revature.services.UserAuthent.UserConfirm(UserAuthent.java:55)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:46)
+	at com.revature.Driver.main(Driver.java:14)
+2019-12-15 12:12:32 INFO  ClientServices:64 - last name changed
+2019-12-15 12:15:44 INFO  Driver:13 - Application Started
+2019-12-15 12:15:57 INFO  UserAuthent:36 - Client logged in successfully
+2019-12-15 12:16:12 INFO  ClientServices:64 - last name changed
+2019-12-15 12:16:24 INFO  ClientServices:30 - User exited from client main menu.
+2019-12-15 12:16:49 INFO  Driver:13 - Application Started
+2019-12-15 12:17:01 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 12:17:31 INFO  ClientServices:86 - password changed
+2019-12-15 12:18:21 INFO  ClientServices:30 - User exited from client main menu.
+2019-12-15 15:17:58 INFO  Driver:13 - Application Started
+2019-12-15 15:18:13 INFO  UserAuthent:59 - Client failed user authentification.
+2019-12-15 15:18:27 INFO  Driver:13 - Application Started
+2019-12-15 15:18:42 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 15:18:44 WARN  AccountDAOImp:107 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at end of input
+  Position: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:309)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:272)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:225)
+	at com.revature.repositories.AccountDAOImp.findByOwnerId(AccountDAOImp.java:91)
+	at com.revature.services.AccountServices.manageAccounts(AccountServices.java:18)
+	at com.revature.services.ClientServices.mainMenu(ClientServices.java:23)
+	at com.revature.services.UserAuthent.UserConfirm(UserAuthent.java:55)
+	at com.revature.services.UserInterface.entrySwitch(UserInterface.java:46)
+	at com.revature.Driver.main(Driver.java:14)
+2019-12-15 15:21:02 INFO  Driver:13 - Application Started
+2019-12-15 15:24:38 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 15:32:45 INFO  Driver:13 - Application Started
+2019-12-15 15:32:59 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 15:33:20 INFO  AccountServices:72 - Deposit made into account

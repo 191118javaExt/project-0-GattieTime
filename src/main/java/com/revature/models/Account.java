@@ -3,7 +3,7 @@ package com.revature.models;
 public class Account {
 
 	private int userID;
-	private int balance;
+	private double balance;
 	private int type;
 	private int accID;
 	private boolean approved;
@@ -14,10 +14,10 @@ public class Account {
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
-	public int getBalance() {
+	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(int balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public int getType() {
@@ -46,8 +46,26 @@ public class Account {
 	}
 	@Override
 	public String toString() {
-		return "Account [userID=" + userID +  ", accID=" + accID + ", name=" + name + ", balance=" + balance + ", type=" + type
+		return "Account [accID=" + accID + " userID=" + userID +  ", name=" + name + ", balance=" + balance + ", type=" + type
 				+ ", approved=" + approved + "]";
+	}
+	
+	public Account(int userID, String name, int type, double balance, boolean approved) {
+		super();
+		this.userID = userID;
+		this.name = name;
+		this.type = type;
+		this.balance = balance;
+		this.approved = approved;
+	}
+	public Account(int accID, int userID, String name, int type, double balance, boolean approved) {
+		super();
+		this.accID = accID;
+		this.userID = userID;
+		this.name = name;
+		this.type = type;
+		this.balance = balance;
+		this.approved = approved;
 	}
 	
 	
