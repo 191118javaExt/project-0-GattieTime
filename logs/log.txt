@@ -156,3 +156,10 @@ org.postgresql.util.PSQLException: ERROR: syntax error at end of input
 2019-12-15 15:36:02 INFO  Driver:13 - Application Started
 2019-12-15 15:36:22 INFO  UserAuthent:54 - Client logged in successfully
 2019-12-15 15:36:34 INFO  AccountServices:72 - Deposit made into account
+2019-12-15 16:47:56 INFO  Driver:13 - Application Started
+2019-12-15 16:48:38 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 16:49:09 INFO  AccountServices:97 - transfer made between accounts3and2
+2019-12-15 21:10:29 INFO  AccountServices:59 - User exited from accounts menu.
+2019-12-15 22:18:46 INFO  Driver:13 - Application Started
+2019-12-15 22:19:05 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 22:19:25 INFO  AccountServices:221 - User applied for a new bank account

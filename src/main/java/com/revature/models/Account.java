@@ -6,8 +6,8 @@ public class Account {
 	private double balance;
 	private int type;
 	private int accID;
-	private boolean approved;
-	private String name;
+	private boolean approved = false;
+	private String name = "My Account";
 	public int getUserID() {
 		return userID;
 	}
@@ -46,7 +46,7 @@ public class Account {
 	}
 	@Override
 	public String toString() {
-		return "Account [accID=" + accID + " userID=" + userID +  ", name=" + name + ", balance=" + balance + ", type=" + type
+		return "Account [Account Number =" + accID + " User ID Number =" + userID +  ", name=" + name + ", balance=" + balance + ", type=" + type
 				+ ", approved=" + approved + "]";
 	}
 	
@@ -67,7 +67,13 @@ public class Account {
 		this.balance = balance;
 		this.approved = approved;
 	}
-	
+	public Account(int userID, String name, int type, double balance) {
+		super();
+		this.userID = userID;
+		this.name = name;
+		this.type = type;
+		this.balance = balance;
+	}
 	
 
 }

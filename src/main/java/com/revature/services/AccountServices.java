@@ -206,8 +206,80 @@ public class AccountServices {
 	}
 
 	public static void apply(User user) {
-		// TODO Auto-generated method stub
+		System.out.println("Thank you for apply for a new account");
+		int type = accType();
+		int userId = user.getUserID();
+		String name = accName();
+		double balance = startBalance();
+		
+		Account a = new Account(userId, name, type, balance);
+		AccountDAOImp aDAO = new AccountDAOImp();
+		if (aDAO.insert(a)) {
+			System.out.println("Your new account has been created. Please take note of the account of the account number below.");
+			System.out.println(a);
+			System.out.println("Please note that you will not be able to access the account until it is approved.");
+			logger.info("User applied for a new bank account");
+		} else {
+			System.out.println("Unable to create the new account. Please try again.");
+			logger.warn("User application for a bank account failed.");
+			apply(user);
+		}
 
+	}
+
+	private static double startBalance() {
+		System.out.println("What would you like your initial deposit to be? (Your deposit must be greater than or equal to the account types minimum balance.)");
+		Scanner s = new Scanner(System.in);
+		double i = 0;
+		try {
+			i = s.nextDouble();
+
+		} catch (InputMismatchException e) {
+			System.out.println("That is not a valid entry; please try again.");
+			i = startBalance();
+		}
+		
+		if (i < 0) {
+			System.out.println("You may not start an account with a negative balance.");
+			i = startBalance();
+		}
+		return i; 
+		
+	}
+
+	private static String accName() {
+		System.out.println("What would you like to call your account?");
+		Scanner s = new Scanner(System.in);
+		String[] passArr = s.nextLine().split("\\n");
+		String name = passArr[0];
+		while (name.length() > 50) {
+			System.out.println("Your account name is too long. Please chose a new account name");
+			passArr = s.nextLine().split("\\n");
+			name = passArr[0];
+		}
+		return name;
+	}
+
+	private static int accType() {
+		System.out.println("What type of bank account do you want to create?");
+		System.out.println("[1]: Basic Checking (no minimum balance required. No monthly fees. Annual interest rate of 0%.)");
+		System.out.println("[2]: Basic Savings ((no minimum balance required. No monthly fees. Annual interest rate of 0.2%.)");
+		Scanner s = new Scanner(System.in);
+		int i = 0;
+		try {
+			i = s.nextInt();
+
+		} catch (InputMismatchException e) {
+			System.out.println("That is not a valid entry; please try again.");
+			i = accType();
+		}
+
+		if (i != 1 && i != 2) {
+			System.out.println("You did not enter a valid number.");
+			i = accType();
+		}
+
+		return i;
 	}
 
 }
