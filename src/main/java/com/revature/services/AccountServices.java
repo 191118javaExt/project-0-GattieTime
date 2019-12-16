@@ -39,7 +39,7 @@ public class AccountServices {
 		}
 	}
 
-	private static void transactions(Account a) {
+	static void transactions(Account a) {
 		System.out.println(a);
 		int i = transSelect();
 		if (i == 1) {
@@ -184,7 +184,7 @@ public class AccountServices {
 	}
 
 	private static int selectAcc() {
-		System.out.println("What is the number of the account you would like to access? Type 0 to exit");
+		System.out.println("What is the account number of the account you would like to access? Type 0 to exit");
 		Scanner s = new Scanner(System.in);
 		int i = 0;
 		try {
@@ -280,6 +280,47 @@ public class AccountServices {
 		}
 
 		return i;
+	}
+
+	public static void manageApplications() {
+		System.out.println("These are the current unapproved account applications:");
+		AccountDAOImp aDAO = new AccountDAOImp();
+		List<Account> list = aDAO.findApprove();
+		for (Account a: list) {
+			System.out.println(a);
+		}
+		accountApprove();
+		
+		
+	}
+
+	private static void accountApprove() {
+		System.out.println("What is the account number of the account would you like to approve? Type 0 to exit.");
+		Scanner s = new Scanner(System.in);
+		int i = 0;
+		try {
+			i = s.nextInt();
+
+		} catch (InputMismatchException e) {
+			System.out.println("That is not a valid entry; please try again.");
+			i = selectAcc();
+		}
+
+		if (i == 0) {
+			System.out.println(
+					"Her Royal Majesty thanks you for your dedication.");
+			System.exit(0);
+			logger.info("User exited from account approve screen.");
+		} else {
+			AccountDAOImp aDAO = new AccountDAOImp();
+			Account a = aDAO.findById(i);
+			a.setApproved(true);
+			aDAO.update(a);
+			System.out.println("You have approved account: " + i + ".");
+			logger.info("Account " +i+ " approved.");
+		}
+
+		
 	}
 
 }

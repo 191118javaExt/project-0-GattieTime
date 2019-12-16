@@ -78,7 +78,7 @@ public class UserAuthent {
 					System.out.println("Welcome " + newUser.getUserFirstName() + " " + newUser.getUserLastName()
 							+ ". You have successfully logged in.");
 					logger.info("Employee logged in successfully");
-					EmployeeServices.mainMenu(newUser);
+					EmployeeServices.mainMenu();
 				} else {
 					System.out.println(
 							"Your user name and password did not match. Please restart the application and try again.");
@@ -96,7 +96,7 @@ public class UserAuthent {
 					System.out.println("Welcome " + newUser.getUserFirstName() + " " + newUser.getUserLastName()
 							+ ". You have successfully logged in.");
 					logger.info("Employee logged in successfully");
-					EmployeeServices.mainMenu(newUser);
+					EmployeeServices.mainMenu();
 				} else {
 					System.out.println(
 							"Your user name and password did not match. Please restart the application and try again.");
@@ -121,7 +121,7 @@ public class UserAuthent {
 					System.out.println("Welcome " + newUser.getUserFirstName() + " " + newUser.getUserLastName()
 							+ ". You have successfully logged in.");
 					logger.info("Admin logged in successfully");
-					AdminServices.mainMenu(newUser);
+					AdminServices.mainMenu();
 				} else {
 					System.out.println(
 							"Your user name and password did not match. Please restart the application and try again.");
@@ -139,7 +139,7 @@ public class UserAuthent {
 					System.out.println("Welcome " + newUser.getUserFirstName() + " " + newUser.getUserLastName()
 							+ ". You have successfully logged in.");
 					logger.info("Admin logged in successfully");
-					AdminServices.mainMenu(newUser);
+					AdminServices.mainMenu();
 				} else {
 					System.out.println(
 							"Your user name and password did not match. Please restart the application and try again.");

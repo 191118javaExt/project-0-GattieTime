@@ -163,3 +163,24 @@ org.postgresql.util.PSQLException: ERROR: syntax error at end of input
 2019-12-15 22:18:46 INFO  Driver:13 - Application Started
 2019-12-15 22:19:05 INFO  UserAuthent:54 - Client logged in successfully
 2019-12-15 22:19:25 INFO  AccountServices:221 - User applied for a new bank account
+2019-12-15 22:20:41 INFO  Driver:13 - Application Started
+2019-12-15 22:21:00 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-15 22:21:16 INFO  AccountServices:59 - User exited from accounts menu.
+2019-12-15 22:21:16 INFO  AccountServices:32 - User tried to access an unapproved account.
+2019-12-15 23:12:47 INFO  Driver:13 - Application Started
+2019-12-15 23:14:16 INFO  UserAuthent:85 - Employee failed user authentification.
+2019-12-15 23:21:09 INFO  Driver:13 - Application Started
+2019-12-15 23:22:11 INFO  Driver:13 - Application Started
+2019-12-15 23:22:27 INFO  UserAuthent:80 - Employee logged in successfully
+2019-12-15 23:22:44 INFO  AccountServices:320 - Account 4 approved.
+2019-12-15 23:22:58 INFO  Driver:13 - Application Started
+2019-12-15 23:23:33 INFO  UserAuthent:98 - Employee logged in successfully
+2019-12-15 23:24:08 INFO  Driver:13 - Application Started
+2019-12-15 23:24:22 INFO  UserAuthent:141 - Admin logged in successfully
+2019-12-15 23:24:28 INFO  Driver:13 - Application Started
+2019-12-15 23:24:40 INFO  UserAuthent:98 - Employee logged in successfully
+2019-12-15 23:24:46 INFO  EmployeeServices:69 - User looked at account 1.
+2019-12-15 23:25:22 INFO  Driver:13 - Application Started
+2019-12-15 23:25:39 INFO  UserAuthent:98 - Employee logged in successfully
+2019-12-15 23:25:43 INFO  EmployeeServices:45 - User looked at account 2.
+2019-12-15 23:25:55 INFO  EmployeeServices:32 - User exited from Employee main menu.

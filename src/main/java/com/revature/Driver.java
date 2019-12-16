@@ -13,4 +13,5 @@ public class Driver {
 		logger.info("Application Started");
 		UserInterface.entrySwitch(UserInterface.entryScreen());
 	}
+	
 }

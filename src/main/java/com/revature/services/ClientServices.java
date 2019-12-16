@@ -127,7 +127,7 @@ public class ClientServices {
 		}
 
 		if (i != 1 && i != 2 && i != 3 && i != 4) {
-			System.out.println("You did not enter a valid number.");
+			System.out.println("You did not enter a valid number. Please try again. Type a number 1-4.");
 			i = mainSelection();
 		}
 
