@@ -13,7 +13,7 @@ import com.revature.repositories.ClientDAOImp;
 import com.revature.repositories.EmployeeDAOImp;
 
 public class NewUserCreation {
-	
+
 	public static User newUserAccount() {
 		int userType = typeOfUser();
 		String firstName = makeNewFirst();
@@ -23,46 +23,62 @@ public class NewUserCreation {
 
 		User newUser = null;
 		if (userType == 1) {
-			newUser = new Client(firstName, lastName, logIn, password);
-			ClientDAOImp cliDAO = new ClientDAOImp();
-			if (!cliDAO.insert((Client) newUser)) {
-				System.out.println("Something went wrong. Please try again.");
-			} else {
-				System.out.println("Your account has been created. Please restart the application and sign in.");
-			}
-		} else if(userType==2) {
-			newUser = new Employee(firstName, lastName, logIn, password);
-			EmployeeDAOImp empDAO = new EmployeeDAOImp();
-			if (!empDAO.insert((Employee) newUser)) {
-				System.out.println("Something went wrong. Please try again.");
-			} else {
-				System.out.println("Your account is waiting verification by an administrator.");
-			}
-		} else if( userType ==3 ) {
-			newUser = new Admin(firstName, lastName, logIn, password);
-			AdminDAOImp admDAO = new AdminDAOImp();
-			if (!admDAO.insert((Admin) newUser)) {
-				System.out.println("Something went wrong. Please try again.");
-			} else {
-				System.out.println("Your account is waiting verification by an administrator.");
-			}
+			newUser = constructClient(firstName, lastName, logIn, password);
+		} else if (userType == 2) {
+			constructEmployee(firstName, lastName, logIn, password);
+		} else if (userType == 3) {
+			newUser = constructAdmin(firstName, lastName, logIn, password);	
 		}
 
 		return newUser;
 
 	}
 
+	static Admin constructAdmin(String firstName, String lastName, String logIn, int password) {
+		Admin newUser = new Admin(firstName, lastName, logIn, password);
+		AdminDAOImp admDAO = new AdminDAOImp();
+		if (!admDAO.insert((Admin) newUser)) {
+			System.out.println("Something went wrong. Please try again.");
+		} else {
+			System.out.println("Your account is waiting verification by an administrator.");
+		}
+		return newUser;
+	}
+
+	static Employee constructEmployee(String firstName, String lastName, String logIn, int password) {
+		Employee newUser = new Employee(firstName, lastName, logIn, password);
+		EmployeeDAOImp empDAO = new EmployeeDAOImp();
+		if (!empDAO.insert((Employee) newUser)) {
+			System.out.println("Something went wrong. Please try again.");
+		} else {
+			System.out.println("Your account is waiting verification by an administrator.");
+		}
+		return newUser;
+	}
+
+	static Client constructClient(String firstName, String lastName, String logIn, int password) {
+		Client newUser = new Client(firstName, lastName, logIn, password);
+		ClientDAOImp cliDAO = new ClientDAOImp();
+		if (!cliDAO.insert((Client) newUser)) {
+			System.out.println("Something went wrong. Please try again.");
+		} else {
+			System.out.println("Your account has been created. Please restart the application and sign in.");
+		}
+		return newUser;
+	}
+
 //Determine the type of user to create
 	private static int typeOfUser() {
 		Scanner s = new Scanner(System.in);
-		System.out.println("What type of user is this account for? Please type the appropiate number and press 'enter'");
+		System.out
+				.println("What type of user is this account for? Please type the appropiate number and press 'enter'");
 		System.out.println("[1]: New Client Account");
 		System.out.println("[2]: New Employeee Account");
 		System.out.println("[3]: New Administrator Account");
 		int i = 0;
 		try {
 			i = s.nextInt();
-			
+
 		} catch (InputMismatchException e) {
 			System.out.println("That is not a valid entry; please try again.");
 			i = typeOfUser();
@@ -72,7 +88,6 @@ public class NewUserCreation {
 			System.out.println("You did not enter a valid number.");
 			i = typeOfUser();
 		}
-		
 
 		return i;
 	}
@@ -112,13 +127,13 @@ public class NewUserCreation {
 			ans = ans.toLowerCase();
 			EmployeeDAOImp edao = new EmployeeDAOImp();
 			List<Employee> list = edao.findAll();
-			for (Employee e: list) {
+			for (Employee e : list) {
 				if (lastName.equals(e.getUserLogIn())) {
 					ans = "no";
 					System.out.println("That log in name is already taken; please try another name.");
 				}
 			}
-			if (ans.length()!=0 && ans.charAt(0) == 'y') {
+			if (ans.length() != 0 && ans.charAt(0) == 'y') {
 				b = true;
 			} else {
 				System.out.println("Please enter the name again.");
@@ -140,7 +155,7 @@ public class NewUserCreation {
 			System.out.println("Type \"yes\" or \"no.\"");
 			String ans = new String(s.next());
 			ans = ans.toLowerCase();
-			if (ans.length()!=0 && ans.charAt(0) == 'y') {
+			if (ans.length() != 0 && ans.charAt(0) == 'y') {
 				b = true;
 			} else {
 				System.out.println("Please enter the name again.");
@@ -163,7 +178,7 @@ public class NewUserCreation {
 			System.out.println("Type \"yes\" or \"no.\"");
 			String ans = new String(s.nextLine());
 			ans = ans.toLowerCase();
-			if (ans.length()!=0 && ans.charAt(0) == 'y') {
+			if (ans.length() != 0 && ans.charAt(0) == 'y') {
 				b = true;
 			} else {
 				System.out.println("Please enter the name again.");
