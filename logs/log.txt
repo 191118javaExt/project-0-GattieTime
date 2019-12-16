@@ -184,3 +184,11 @@ org.postgresql.util.PSQLException: ERROR: syntax error at end of input
 2019-12-15 23:25:39 INFO  UserAuthent:98 - Employee logged in successfully
 2019-12-15 23:25:43 INFO  EmployeeServices:45 - User looked at account 2.
 2019-12-15 23:25:55 INFO  EmployeeServices:32 - User exited from Employee main menu.
+2019-12-16 09:48:38 INFO  Driver:13 - Application Started
+2019-12-16 09:48:55 INFO  UserAuthent:141 - Admin logged in successfully
+2019-12-16 09:49:32 INFO  AccountServices:97 - transfer made between accounts2and3
+2019-12-16 09:50:57 INFO  AccountServices:153 - Deposit made into account
+2019-12-16 09:51:29 INFO  AccountServices:59 - User exited from accounts menu.
+2019-12-16 09:51:56 INFO  Driver:13 - Application Started
+2019-12-16 09:52:15 INFO  UserAuthent:141 - Admin logged in successfully
+2019-12-16 09:52:31 INFO  AdminServices:90 - Employee 13 was approved.

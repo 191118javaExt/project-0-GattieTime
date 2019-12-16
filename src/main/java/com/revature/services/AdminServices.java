@@ -86,6 +86,7 @@ public class AdminServices {
 		int userID = chooseID();
 		Employee e = eDAO.findById(userID);
 		e.setApproved(true);
+		eDAO.update(e);
 		System.out.println("Employee " + e.getUserID() + " was approved.");
 		logger.info("Employee " + e.getUserID() + " was approved.");
 		mainMenu();
