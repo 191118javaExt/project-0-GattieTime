@@ -83,24 +83,33 @@ public class AccountServices {
 				System.out.println("That is not a valid entry; please try again.");
 				transactions(a);
 			}
-			if (i >= 0) {
-				double d = ac.getBalance();
-				d += e;
-				ac.setBalance(d);
-				aDAO.update(ac);
-				d = a.getBalance();
-				d -= e;
-				a.setBalance(d);
-				aDAO.update(a);
-				System.out.println(
-						"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
-				logger.info("transfer made between accounts" + a.getAccID() + "and" + ac.getAccID());
-			} else {
-				System.out.println("You man not make a deposit of a negative amount. please try again");
-				logger.info("User tried to transfer a negative amount");
-			}
+			transferMath(a, ac, e);
+			
 		}
 
+	}
+
+	static double transferMath(Account a, Account ac, double e) {
+		AccountDAOImp aDAO = new AccountDAOImp();
+		if (e >= 0) {
+			double d = ac.getBalance();
+			d += e;
+			ac.setBalance(d);
+			aDAO.update(ac);
+			d = a.getBalance();
+			d -= e;
+			a.setBalance(d);
+			aDAO.update(a);
+			System.out.println(
+					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
+			logger.info("transfer made between accounts" + a.getAccID() + "and" + ac.getAccID());
+			return a.getBalance();
+		} else {
+			System.out.println("You man not make a deposit of a negative amount. please try again");
+			logger.info("User tried to transfer a negative amount");
+			return -1.0;
+		}
+		
 	}
 
 	private static void withdraw(Account a) {
@@ -114,21 +123,29 @@ public class AccountServices {
 			System.out.println("That is not a valid entry; please try again.");
 			transactions(a);
 		}
+		withdrawMath(a, i);
+		
+
+	}
+
+	static double withdrawMath(Account a, double i) {
 		if (i >= 0) {
 			double d = a.getBalance();
-			i -= d;
-			a.setBalance(i);
+			d -= i;
+			a.setBalance(d);
 			AccountDAOImp aDAO = new AccountDAOImp();
 			aDAO.update(a);
 			System.out.println(
 					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
 			logger.info("Deposit made into account");
+			return a.getBalance();
 		} else {
 			System.out.println(
 					"You man not make a withdraw of a negative amount. If you would like to make a deposit please do so now");
 			logger.info("User tried to withdraw a negative amount");
+			return -1;
 		}
-
+		
 	}
 
 	private static void deposit(Account a) {
@@ -142,6 +159,12 @@ public class AccountServices {
 			System.out.println("That is not a valid entry; please try again.");
 			transactions(a);
 		}
+		depositMath(a, i);
+		
+
+	}
+
+	static double depositMath(Account a, double i) {
 		if (i >= 0) {
 			double d = a.getBalance();
 			i += d;
@@ -151,12 +174,14 @@ public class AccountServices {
 			System.out.println(
 					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
 			logger.info("Deposit made into account");
+			return a.getBalance();
 		} else {
 			System.out.println(
 					"You man not make a deposite of a negative amount. If you would like to make a withdrawl please do so now");
 			logger.info("User tried to deposit a negative amount");
+			return -1;
 		}
-
+		
 	}
 
 	private static int transSelect() {

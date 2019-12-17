@@ -61,7 +61,6 @@ public class EmployeeServices {
 	}
 
 	static void clientInfo() {
-
 		int i = clientID();
 		ClientDAOImp cDAO = new ClientDAOImp();
 		Client c = cDAO.findById(i);

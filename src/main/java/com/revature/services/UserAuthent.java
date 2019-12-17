@@ -164,6 +164,14 @@ public class UserAuthent {
 		Scanner s = new Scanner(System.in);
 		System.out.println("What is your password?");
 		String[] passArr = s.nextLine().split("\\n");
+		if (passConfirmation(passArr, newUser)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	static boolean passConfirmation(String[] passArr, User newUser) {
 		int pass = passArr[0].hashCode();
 		if (pass == newUser.getUserPassword()) {
 			return true;
