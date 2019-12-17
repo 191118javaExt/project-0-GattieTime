@@ -66,6 +66,8 @@ public class NewUserCreation {
 		}
 		return newUser;
 	}
+	
+	
 
 //Determine the type of user to create
 	private static int typeOfUser() {

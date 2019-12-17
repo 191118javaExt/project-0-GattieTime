@@ -47,30 +47,15 @@ public class ClientServices {
 		int i = infoSelection();
 		if (i == 1) {
 			String newName = NewUserCreation.makeNewFirst();
-			user.setUserFirstName(newName);
-			ClientDAOImp cDAO = new ClientDAOImp();
-			cDAO.update((Client) user);
-			System.out.println("User account's first name has been updated.");
-			System.out.println(user);
-			logger.info("first name changed");
+			user = changeFirst(user, newName);
 			mainMenu(user);
 		} else if (i == 2) {
 			String newName = NewUserCreation.makeNewLast();
-			user.setUserLastName(newName);
-			ClientDAOImp cDAO = new ClientDAOImp();
-			cDAO.update((Client) user);
-			System.out.println("User account's last name has been updated.");
-			System.out.println(user);
-			logger.info("last name changed");
+			user = changeLast(user, newName);
 			mainMenu(user);
 		} else if (i == 3) {
 			String newLog = NewUserCreation.makeNewLogIn();
-			user.setUserLogIn(newLog);
-			ClientDAOImp cDAO = new ClientDAOImp();
-			cDAO.update((Client) user);
-			System.out.println("User account's log in name has been updated.");
-			System.out.println(user);
-			logger.info("login name changed");
+			user = changeLogIn(user, newLog);
 			mainMenu(user);
 		} else if (i == 4) {
 			System.out.println("What is your current password?");
@@ -79,21 +64,57 @@ public class ClientServices {
 			int pass = passArr[0].hashCode();
 			if (pass == user.getUserPassword()) {
 				int newPass = NewUserCreation.makeNewPassword();
-				user.setUserPassword(newPass);
-				ClientDAOImp cDAO = new ClientDAOImp();
-				cDAO.update((Client) user);
-				System.out.println("User account's password name has been updated.");
-				logger.info("password changed");
+				user = changePassword(user, newPass);
 				mainMenu(user);
 			} else {
 				System.out.println("That was not the correct password for this account. Please try again.");
 				mainMenu(user);
 			}
+			
 		} else if (i == 5) {
 			mainMenu(user);
 		}
 		
 		
+	}
+
+	static User changePassword(User user, int pass) {
+		user.setUserPassword(pass);
+		ClientDAOImp cDAO = new ClientDAOImp();
+		cDAO.update((Client) user);
+		System.out.println("User account's password name has been updated. Please restart the application and log in again. ");
+		logger.info("password changed");
+		return user;
+	}
+
+	static User changeLogIn(User user, String newLog) {
+		user.setUserLogIn(newLog);
+		ClientDAOImp cDAO = new ClientDAOImp();
+		cDAO.update((Client) user);
+		System.out.println("User account's log in name has been updated.");
+		System.out.println(user);
+		logger.info("login name changed");
+		return user;
+	}
+
+	static User changeLast(User user, String newName) {
+		user.setUserLastName(newName);
+		ClientDAOImp cDAO = new ClientDAOImp();
+		cDAO.update((Client) user);
+		System.out.println("User account's last name has been updated.");
+		System.out.println(user);
+		logger.info("last name changed");
+		return user;
+	}
+
+	static User changeFirst(User user, String newName) {
+		user.setUserFirstName(newName);
+		ClientDAOImp cDAO = new ClientDAOImp();
+		cDAO.update((Client) user);
+		System.out.println("User account's first name has been updated.");
+		System.out.println(user);
+		logger.info("first name changed");
+		return user;
 	}
 
 	private static int infoSelection() {

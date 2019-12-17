@@ -22,7 +22,7 @@ public class AccountServices {
 		}
 		int i = selectAcc();
 		Account a = aDAO.findById(i);
-		if (a.getUserID() == user.getUserID()) {
+		if (a != null && a.getUserID() == user.getUserID()) {
 			if (a.isApproved()) {
 				transactions(a);
 			} else {

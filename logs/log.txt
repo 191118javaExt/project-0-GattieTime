@@ -622,3 +622,69 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
 2019-12-17 07:35:27 INFO  Driver:108 - Application Started
+2019-12-17 08:33:45 INFO  Driver:147 - Application Started
+2019-12-17 08:34:12 INFO  UserAuthent:59 - Client failed user authentification.
+2019-12-17 08:34:20 INFO  Driver:147 - Application Started
+2019-12-17 08:34:29 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-17 08:55:22 INFO  Driver:147 - Application Started
+2019-12-17 08:56:04 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-17 08:57:05 INFO  Driver:147 - Application Started
+2019-12-17 08:57:19 INFO  UserAuthent:54 - Client logged in successfully
+2019-12-17 08:57:22 INFO  AccountServices:37 - User tried to access account they do not own
+2019-12-17 09:14:59 INFO  Driver:147 - Application Started
+2019-12-17 09:55:29 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 09:55:29 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 09:55:29 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 09:55:29 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 09:55:29 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 09:55:29 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 09:55:29 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 09:55:29 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 09:55:29 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 09:55:30 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 09:55:30 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 09:55:30 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 09:55:30 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 09:55:30 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 10:04:13 INFO  Driver:147 - Application Started
+2019-12-17 10:10:23 INFO  Driver:147 - Application Started
+2019-12-17 10:18:49 INFO  Driver:147 - Application Started
+2019-12-17 10:21:04 INFO  Driver:147 - Application Started
+2019-12-17 11:02:17 INFO  ClientServices:86 - password changed
+2019-12-17 11:02:17 INFO  ClientServices:86 - password changed
+2019-12-17 11:02:17 INFO  ClientServices:116 - first name changed
+2019-12-17 11:02:17 INFO  ClientServices:96 - login name changed
+2019-12-17 11:02:17 INFO  ClientServices:106 - last name changed
+2019-12-17 11:02:18 INFO  ClientServices:106 - last name changed
+2019-12-17 11:02:18 INFO  ClientServices:116 - first name changed
+2019-12-17 11:02:18 INFO  ClientServices:96 - login name changed
+2019-12-17 11:03:36 INFO  ClientServices:86 - password changed
+2019-12-17 11:03:36 INFO  ClientServices:86 - password changed
+2019-12-17 11:03:36 INFO  ClientServices:116 - first name changed
+2019-12-17 11:03:36 INFO  ClientServices:96 - login name changed
+2019-12-17 11:03:37 INFO  ClientServices:106 - last name changed
+2019-12-17 11:03:37 INFO  ClientServices:106 - last name changed
+2019-12-17 11:03:37 INFO  ClientServices:116 - first name changed
+2019-12-17 11:03:37 INFO  ClientServices:96 - login name changed
+2019-12-17 11:04:07 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:04:07 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:04:07 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:04:07 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:04:08 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:04:08 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:04:08 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:04:08 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:04:08 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:04:08 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:04:08 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:04:08 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:04:08 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:04:08 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:04:08 INFO  ClientServices:86 - password changed
+2019-12-17 11:04:08 INFO  ClientServices:86 - password changed
+2019-12-17 11:04:08 INFO  ClientServices:116 - first name changed
+2019-12-17 11:04:08 INFO  ClientServices:96 - login name changed
+2019-12-17 11:04:09 INFO  ClientServices:106 - last name changed
+2019-12-17 11:04:09 INFO  ClientServices:106 - last name changed
+2019-12-17 11:04:09 INFO  ClientServices:116 - first name changed
+2019-12-17 11:04:09 INFO  ClientServices:96 - login name changed
