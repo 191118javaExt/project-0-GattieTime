@@ -29,13 +29,17 @@ public class AdminServices {
 		if (choice == 1) {
 			AccountServices.manageApplications();
 		} else if (choice ==2) {
-			EmployeeServices.clientInfo();
+			int i = EmployeeServices.clientID();
+			EmployeeServices.clientInfo(i);
 		} else if (choice == 3) {
-			EmployeeServices.accountInfo();
+			int i = EmployeeServices.accID();
+			EmployeeServices.accountInfo(i);
 		} else if (choice == 4) {
 			accTransact();
 		} else if (choice == 5) {
-			closeAcc();
+			System.out.println("You are closing an account.");
+			int i = accSelect();
+			closeAcc(i);
 		} else if (choice == 6) {
 			userApprove();
 		} else if (choice == 7) {
@@ -130,16 +134,14 @@ public class AdminServices {
 		return i;
 	}
 
-	private static void closeAcc() {
-		System.out.println("You are closing an account.");
-		int i = accSelect();
+	static Account closeAcc(int i) {
 		AccountDAOImp aDAO = new AccountDAOImp();
 		Account a = aDAO.findById(i);
 		a.setApproved(false);
 		aDAO.update(a);
 		System.out.println("You have closed account " + a.getAccID() + ".");
 		logger.info("Account " + a.getAccID() + " closed.");
-		
+		return a;
 	}
 
 	private static void accTransact() {

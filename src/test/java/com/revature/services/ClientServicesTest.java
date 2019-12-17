@@ -2,6 +2,7 @@ package com.revature.services;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,6 +13,13 @@ public class ClientServicesTest {
 
 	@Before
 	public void setUp() throws Exception {
+		Client c = new Client (17, "Test", "Client", "tClient", 1216985755);
+		ClientDAOImp cDAO = new ClientDAOImp();
+		cDAO.update(c);
+	}
+	
+	@After
+	public void tearDown() throws Exception {
 		Client c = new Client (17, "Test", "Client", "tClient", 1216985755);
 		ClientDAOImp cDAO = new ClientDAOImp();
 		cDAO.update(c);

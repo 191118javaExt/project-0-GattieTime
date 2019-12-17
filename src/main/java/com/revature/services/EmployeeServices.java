@@ -24,9 +24,13 @@ public class EmployeeServices {
 		if (choice == 1) {
 			AccountServices.manageApplications();
 		} else if (choice ==2) {
-			clientInfo();
+			int i = clientID();
+			clientInfo(i);
+			mainMenu();
 		} else if (choice == 3) {
-			accountInfo();
+			int i = accID();
+			accountInfo(i);
+			mainMenu();
 		} else if (choice == 4) {
 			System.out.println("Her Majesty thanks you for your service.");
 			logger.info("User exited from Employee main menu.");
@@ -37,16 +41,15 @@ public class EmployeeServices {
 		
 	}
 
-	static void accountInfo() {
-		int i = accID();
+	static Account accountInfo(int i) {
 		AccountDAOImp aDAO = new AccountDAOImp();
 		Account a = aDAO.findById(i);
 		System.out.println(a);
 		logger.info("User looked at account " + a.getAccID() + ".");
-		mainMenu();
+		return a;
 	}
 
-	private static int accID() {
+	static int accID() {
 		System.out.println("Type the account id of the account whose information you would like to see and hit \"enter\".");
 		Scanner s = new Scanner(System.in);
 		int i = 0;
@@ -60,16 +63,15 @@ public class EmployeeServices {
 		return i;
 	}
 
-	static void clientInfo() {
-		int i = clientID();
+	static Client clientInfo(int i) {
 		ClientDAOImp cDAO = new ClientDAOImp();
 		Client c = cDAO.findById(i);
 		System.out.println(c);
 		logger.info("User looked at account " + c.getUserID() + ".");
-		mainMenu();
+		return c;
 	}
 
-	private static int clientID() {
+	static int clientID() {
 		System.out.println("Type the client id of the client whose information you would like to see and hit \"enter\".");
 		Scanner s = new Scanner(System.in);
 		int i = 0;

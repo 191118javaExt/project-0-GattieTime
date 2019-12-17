@@ -688,3 +688,142 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 2019-12-17 11:04:09 INFO  ClientServices:106 - last name changed
 2019-12-17 11:04:09 INFO  ClientServices:116 - first name changed
 2019-12-17 11:04:09 INFO  ClientServices:96 - login name changed
+2019-12-17 11:12:23 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:12:23 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:12:23 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:12:23 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:12:23 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:23 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:12:23 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:23 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:12:23 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:12:23 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:23 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:12:24 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:12:24 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:12:24 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:55 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:12:56 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:12:56 INFO  AccountServices:140 - Deposit made into account
+2019-12-17 11:12:56 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:12:56 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:56 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:12:56 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:56 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:12:56 INFO  AccountServices:181 - User tried to deposit a negative amount
+2019-12-17 11:12:56 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:56 INFO  AccountServices:145 - User tried to withdraw a negative amount
+2019-12-17 11:12:57 INFO  AccountServices:176 - Deposit made into account
+2019-12-17 11:12:57 INFO  AccountServices:109 - User tried to transfer a negative amount
+2019-12-17 11:12:57 INFO  AccountServices:105 - transfer made between accounts0and0
+2019-12-17 11:12:57 INFO  ClientServices:86 - password changed
+2019-12-17 11:12:57 INFO  ClientServices:86 - password changed
+2019-12-17 11:12:57 INFO  ClientServices:116 - first name changed
+2019-12-17 11:12:57 INFO  ClientServices:96 - login name changed
+2019-12-17 11:12:58 INFO  ClientServices:106 - last name changed
+2019-12-17 11:12:58 INFO  ClientServices:106 - last name changed
+2019-12-17 11:12:58 INFO  ClientServices:116 - first name changed
+2019-12-17 11:12:58 INFO  ClientServices:96 - login name changed
+2019-12-17 14:45:38 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 14:45:38 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 14:45:38 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 14:45:38 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 14:45:38 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:45:38 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 14:45:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:45:39 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 14:45:39 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 14:45:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:45:39 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 14:45:39 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 14:45:39 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 14:45:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:45:39 INFO  ClientServices:86 - password changed
+2019-12-17 14:45:39 INFO  ClientServices:86 - password changed
+2019-12-17 14:45:39 INFO  ClientServices:116 - first name changed
+2019-12-17 14:45:40 INFO  ClientServices:96 - login name changed
+2019-12-17 14:45:40 INFO  ClientServices:106 - last name changed
+2019-12-17 14:45:40 INFO  ClientServices:106 - last name changed
+2019-12-17 14:45:40 INFO  ClientServices:116 - first name changed
+2019-12-17 14:45:40 INFO  ClientServices:96 - login name changed
+2019-12-17 14:52:17 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 14:52:17 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 14:52:17 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 14:52:17 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 14:52:18 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:52:18 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 14:52:18 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:52:18 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 14:52:18 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 14:52:18 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:52:18 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 14:52:18 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 14:52:18 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 14:52:18 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 14:52:18 INFO  ClientServices:86 - password changed
+2019-12-17 14:52:19 INFO  ClientServices:86 - password changed
+2019-12-17 14:52:19 INFO  ClientServices:116 - first name changed
+2019-12-17 14:52:19 INFO  ClientServices:96 - login name changed
+2019-12-17 14:52:20 INFO  ClientServices:106 - last name changed
+2019-12-17 14:52:20 INFO  ClientServices:106 - last name changed
+2019-12-17 14:52:20 INFO  ClientServices:116 - first name changed
+2019-12-17 14:52:20 INFO  ClientServices:96 - login name changed
+2019-12-17 14:52:21 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 14:52:21 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 14:52:21 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 14:52:21 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 15:23:53 INFO  AdminServices:143 - Account 1 closed.
+2019-12-17 15:24:30 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 15:24:30 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 15:24:30 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:30 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 15:24:30 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:30 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:30 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 15:24:30 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 15:24:30 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:31 INFO  ClientServices:86 - password changed
+2019-12-17 15:24:31 INFO  ClientServices:86 - password changed
+2019-12-17 15:24:31 INFO  ClientServices:116 - first name changed
+2019-12-17 15:24:31 INFO  ClientServices:96 - login name changed
+2019-12-17 15:24:31 INFO  ClientServices:106 - last name changed
+2019-12-17 15:24:32 INFO  ClientServices:106 - last name changed
+2019-12-17 15:24:32 INFO  ClientServices:116 - first name changed
+2019-12-17 15:24:32 INFO  ClientServices:96 - login name changed
+2019-12-17 15:24:32 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 15:24:32 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 15:24:32 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 15:24:32 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 15:24:33 INFO  AdminServices:143 - Account 1 closed.
+2019-12-17 15:24:38 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 15:24:38 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 15:24:38 INFO  AccountServices:142 - Withdrawl  of 3000.0 made from account 0
+2019-12-17 15:24:38 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 15:24:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:39 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 15:24:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:39 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 15:24:39 INFO  AccountServices:183 - User tried to deposit a negative amount
+2019-12-17 15:24:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:39 INFO  AccountServices:147 - User tried to withdraw a negative amount
+2019-12-17 15:24:39 INFO  AccountServices:178 - Deposit of 23000.0 made into account 0
+2019-12-17 15:24:39 INFO  AccountServices:111 - User tried to transfer a negative amount
+2019-12-17 15:24:39 INFO  AccountServices:107 - transfer made of 3000.0 between accounts 0 and 0
+2019-12-17 15:24:39 INFO  ClientServices:86 - password changed
+2019-12-17 15:24:39 INFO  ClientServices:86 - password changed
+2019-12-17 15:24:40 INFO  ClientServices:116 - first name changed
+2019-12-17 15:24:40 INFO  ClientServices:96 - login name changed
+2019-12-17 15:24:40 INFO  ClientServices:106 - last name changed
+2019-12-17 15:24:40 INFO  ClientServices:106 - last name changed
+2019-12-17 15:24:40 INFO  ClientServices:116 - first name changed
+2019-12-17 15:24:41 INFO  ClientServices:96 - login name changed
+2019-12-17 15:24:41 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 15:24:41 INFO  EmployeeServices:48 - User looked at account 2.
+2019-12-17 15:24:41 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 15:24:41 INFO  EmployeeServices:70 - User looked at account 17.
+2019-12-17 15:24:41 INFO  AdminServices:143 - Account 1 closed.

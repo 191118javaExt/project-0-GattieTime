@@ -13,6 +13,7 @@ import com.revature.repositories.AccountDAOImp;
 public class AccountServices {
 	private static Logger logger = Logger.getLogger(AccountServices.class);
 
+	//Accounts main menu, displays all your accounts
 	public static void manageAccounts(User user) {
 		AccountDAOImp aDAO = new AccountDAOImp();
 		List<Account> list = aDAO.findByOwnerId(user.getUserID());
@@ -27,7 +28,7 @@ public class AccountServices {
 				transactions(a);
 			} else {
 				System.out.println(
-						"That account has not yet been approved. Please wait for approval before trying to access that account.");
+						"That account has not yet been approved. Please wait for approval before trying to access that account. If the account was previously approved then the account has been closed. Please contact an Adminstrator for support if you believe this to have been done in error.");
 				manageAccounts(user);
 				logger.info("User tried to access an unapproved account.");
 			}
@@ -38,7 +39,7 @@ public class AccountServices {
 			manageAccounts(user);
 		}
 	}
-
+	//single account menu
 	static void transactions(Account a) {
 		System.out.println(a);
 		int i = transSelect();
@@ -73,6 +74,7 @@ public class AccountServices {
 		if (ac == null) {
 			System.out.println("That is not a valid account number. Please try again");
 			logger.info("User tried to transer to an account that does not exist.");
+			transfer(a);
 		} else {
 			System.out.println("How much would you like to transfer?");
 			double e = 0;
@@ -102,7 +104,7 @@ public class AccountServices {
 			aDAO.update(a);
 			System.out.println(
 					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
-			logger.info("transfer made between accounts" + a.getAccID() + "and" + ac.getAccID());
+			logger.info("transfer made of " + e + " between accounts " + a.getAccID() + " and " + ac.getAccID());
 			return a.getBalance();
 		} else {
 			System.out.println("You man not make a deposit of a negative amount. please try again");
@@ -137,7 +139,7 @@ public class AccountServices {
 			aDAO.update(a);
 			System.out.println(
 					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
-			logger.info("Deposit made into account");
+			logger.info("Withdrawl  of " + i + " made from account " + a.getAccID());
 			return a.getBalance();
 		} else {
 			System.out.println(
@@ -173,7 +175,7 @@ public class AccountServices {
 			aDAO.update(a);
 			System.out.println(
 					"Congradulations your transaction is complete. You account balance is now " + a.getBalance());
-			logger.info("Deposit made into account");
+			logger.info("Deposit of " + i + " made into account " + a.getAccID());
 			return a.getBalance();
 		} else {
 			System.out.println(
